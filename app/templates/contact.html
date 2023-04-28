@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+
+<div id="body" class="contact">
+			<div>
+				<h1>Contact us</h1>
+				<img src="/static/images/map.png" alt="">
+				<h2>ADDRESS</h2>
+				<p>This is just a placeholder so that you would know what the site would look like.</p>
+				<h2>NUMBERS</h2>
+				<a href="index.html">+123456789 or +123456789</a>
+				<h2>Email</h2>
+				<a href="index.html">info@rnrnr.com</a>
+				<h4>JOIN RNRNR NOW</h4>
+				<form method="post" action="{{ url_for('Contact') }}">  <!-- post methodu kullanılarak iletişim verilerinin alınması ve yeniden contact'a yönlendirilmesi -->
+					<input type="text" name="name" value="name" onblur="this.value=!this.value?'Name':this.value;" onfocus="this.select()" onclick="this.value='';">
+					<input type="text" name="Address" value="address" onblur="this.value=!this.value?'Address':this.value;" onfocus="this.select()" onclick="this.value='';">
+					<input type="text" name="Email" value="email" onblur="this.value=!this.value?'Email':this.value;" onfocus="this.select()" onclick="this.value='';">
+					<textarea name="meassage" cols="50" rows="7">Message</textarea>
+					<input type="submit" value="Send" id="submit">
+				</form>
+			</div>
+		</div>
+
+
+
+
+{% endblock %}
